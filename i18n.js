@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         element.textContent = translations[key];
                     }
                 });
+                if (translations['title']) {
+                    document.title = translations['title'];
+                }
                 if (document.getElementById('result').innerHTML) {
                     calculateChargingTime();
                 }
