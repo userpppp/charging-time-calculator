@@ -1,0 +1,12 @@
+{
+    "title": "充電時間計算器",
+    "start-time-label": "開始充電時間 (HH:mm):",
+    "start-charge-label": "開始充電時的電量 (%):",
+    "current-charge-label": "當前電量 (%):",
+    "calculate-btn": "計算充電時間",
+    "fill-all-fields": "請填寫所有字段",
+    "charge-range": "電量必須在0到100之間",
+    "full-charge-time": "充滿電時間",
+    "charging-rate": "充電速度",
+    "minutes-per-percent": "分鐘/%"
+}

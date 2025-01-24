@@ -4,7 +4,7 @@ function calculateChargingTime() {
     const currentChargeInput = document.getElementById('current-charge').value;
 
     if (!startTimeInput || !startChargeInput || !currentChargeInput) {
-        alert('请填写所有字段');
+        alert(getTranslation('fill-all-fields'));
         return;
     }
 
@@ -17,12 +17,12 @@ function calculateChargingTime() {
     const currentCharge = parseInt(currentChargeInput);
     
     if (isNaN(startCharge) || isNaN(currentCharge) || startCharge < 0 || startCharge > 100 || currentCharge < 0 || currentCharge > 100) {
-        alert('电量必须在0到100之间');
+        alert(getTranslation('charge-range'));
         return;
     }
 
     const chargeNeeded = 100 - currentCharge;
-    const chargingRate = (new Date() - startTime) / (currentCharge-startCharge) / 60000;
+    const chargingRate = (new Date() - startTime) / (currentCharge - startCharge) / 60000;
     
     const timeToFullCharge = chargeNeeded * chargingRate;
 
@@ -32,9 +32,15 @@ function calculateChargingTime() {
     const fullChargeMinutes = fullChargeTime.getMinutes().toString().padStart(2, '0');
 
     document.getElementById('result').innerHTML = `
-        充满电时间: ${fullChargeHours}:${fullChargeMinutes} <br>
-        充电速度: ${chargingRate.toFixed(2)}分钟/%
+        ${getTranslation('full-charge-time')}: ${fullChargeHours}:${fullChargeMinutes} <br>
+        ${getTranslation('charging-rate')}: ${chargingRate.toFixed(2)} ${getTranslation('minutes-per-percent')}
     `;
+}
+
+function getTranslation(key) {
+    const translations = window.translations || {};
+    const lang = document.documentElement.lang || 'zh-cn';
+    return translations[lang][key] || key;
 }
 
 document.getElementById('calculate-btn').addEventListener('click', calculateChargingTime);

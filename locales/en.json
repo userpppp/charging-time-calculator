@@ -1,0 +1,12 @@
+{
+    "title": "Charging Time Calculator",
+    "start-time-label": "Start Charging Time (HH:mm):",
+    "start-charge-label": "Start Charge Level (%):",
+    "current-charge-label": "Current Charge Level (%):",
+    "calculate-btn": "Calculate Charging Time",
+    "fill-all-fields": "Please fill in all fields",
+    "charge-range": "Charge level must be between 0 and 100",
+    "full-charge-time": "Full Charge Time",
+    "charging-rate": "Charging Rate",
+    "minutes-per-percent": "minutes/%"
+}

@@ -1,0 +1,12 @@
+{
+    "title": "充电时间计算器",
+    "start-time-label": "开始充电时间 (HH:mm):",
+    "start-charge-label": "开始充电时的电量 (%):",
+    "current-charge-label": "当前电量 (%):",
+    "calculate-btn": "计算充电时间",
+    "fill-all-fields": "请填写所有字段",
+    "charge-range": "电量必须在0到100之间",
+    "full-charge-time": "充满电时间",
+    "charging-rate": "充电速度",
+    "minutes-per-percent": "分钟/%"
+}
