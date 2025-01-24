@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lang = document.documentElement.lang || 'zh-cn';
 
     function loadTranslations(lang) {
-        fetch(`/locales/${lang}.json`)
+        fetch(`/charging-time-calculator/locales/${lang}.json`)
             .then(response => response.json())
             .then(translations => {
                 window.translations = window.translations || {};
@@ -14,9 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         element.textContent = translations[key];
                     }
                 });
-                if (translations['title']) {
-                    document.title = translations['title'];
-                }
                 if (document.getElementById('result').innerHTML) {
                     calculateChargingTime();
                 }
