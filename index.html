@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>充电时间计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>充电时间计算器</h1>
+        <label for="start-time">开始充电时间 (HH:mm):</label>
+        <input type="time" id="start-time" required>
+
+        <label for="start-charge">开始充电时的电量 (%):</label>
+        <input type="number" id="start-charge" min="0" max="100" required>
+
+        <label for="current-charge">当前电量 (%):</label>
+        <input type="number" id="current-charge" min="0" max="100" required>
+
+        <button id="calculate-btn">计算充电时间</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
